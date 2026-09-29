@@ -4,20 +4,23 @@ Mods for **Stronghold Crusader** and **Stronghold Crusader Extreme** (Steam, v1.
 faster games, a bread economy that's worth building, useful stances, stronger castles, healing,
 autosave, your own colour, and a small app that installs, tunes and updates it all.
 
-**[Download the latest version](https://github.com/ali-kin4/crusader-mod-pack/releases/latest)**
-(`CrusaderModPack-vX.Y.Z.zip`). Nothing to install: it brings its own Python.
-
-![Crusader Mod Pack](docs/app.png)
+**[Download the installer](https://github.com/ali-kin4/crusader-mod-pack/releases/latest/download/CrusaderModPack-Setup.exe)**
+(`CrusaderModPack-Setup.exe`, 12 MB). Nothing else to install: it brings its own Python.
 
 ## Install
 
-1. In Steam, right-click **Stronghold Crusader** > **Manage** > **Browse local files**. That's your game folder.
-2. Extract the zip into it. You get a `CrusaderModPack` folder next to `Stronghold Crusader.exe`.
-3. Open `CrusaderModPack` and double-click **`Crusader Mod Pack.bat`**.
-   Windows may ask once whether to run it: choose **Run** (or **More info** > **Run anyway**).
-4. Pick a play style, click **Apply mods**, and start the game as usual.
+1. Run `CrusaderModPack-Setup.exe`. The first time, Windows may say it doesn't know the app:
+   click **More info** > **Run anyway**.
+2. It finds your game folder by itself (any Steam library, or GOG). If it doesn't, click **Browse**
+   and pick the folder with `Stronghold Crusader.exe`.
+3. Leave **Apply the mods now** ticked and click **Install**. Done: start the game as usual.
 
-"Add desktop shortcut" in the app gives you a shortcut with the game's icon for next time.
+![The installer](docs/installer.png)
+
+Open **Crusader Mod Pack** from the Start menu or the desktop shortcut to switch play styles,
+change any setting, or update:
+
+![Crusader Mod Pack](docs/app.png)
 
 ## Updates
 
@@ -54,8 +57,13 @@ to the AI lords too, so the game stays fair.
 
 ## Remove it
 
-Click **Restore original** in the app, then delete the `CrusaderModPack` folder. Steam's
-**Verify integrity of game files** also puts the original game back.
+Windows **Settings** > **Apps** > **Installed apps** > **Crusader Mod Pack** > **Uninstall**. It puts
+the original game files back and removes the pack. (Steam's **Verify integrity of game files** also
+restores the original game.)
+
+Prefer no installer? Each release also has `CrusaderModPack-vX.Y.Z.zip`: extract it into your game
+folder, run `Crusader Mod Pack.bat`, and click **Apply mods**. To remove it, click **Restore original**
+and delete the `CrusaderModPack` folder.
 
 ## Good to know
 
@@ -67,7 +75,8 @@ Click **Restore original** in the app, then delete the `CrusaderModPack` folder.
 - **UCP:** don't combine it with the Unofficial Crusader Patch on the same exe; use one or the other.
 - **GOG:** the app finds GOG installs too, but the pack is made and tested for the Steam exes.
 - **Antivirus / SmartScreen:** new downloads that aren't widely used yet can trigger a warning.
-  The pack is a folder of Python scripts plus python.org's official runtime; you can read every file.
+  The installer is made with Inno Setup; the pack is a folder of Python scripts plus python.org's
+  official runtime, so you can read every file it installs.
 - The app is a small page served only to your own PC (`127.0.0.1`), shown in its own window. It
   closes when you close the window.
 
